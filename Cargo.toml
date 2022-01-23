@@ -1,0 +1,19 @@
+[package]
+name = "github-actions-serial-waiter"
+version = "0.1.0"
+edition = "2021"
+authors = ["Mike Zeller <mike@mikezeller.net>"]
+description = "Small serial port server that waits for a string of text and then exits"
+readme = "README.md"
+repository = "https://github.com/papertigers/github-actions-serial-waiter"
+license = "MIT"
+
+[profile.dev]
+panic = 'abort'
+
+[profile.release]
+panic = 'abort'
+
+[dependencies]
+anyhow = "1.0.52"
+getopts = "0.2.21"
